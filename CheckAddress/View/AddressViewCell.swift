@@ -14,6 +14,6 @@ class AddressViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var stateLabel: UILabel!
-    @IBOutlet weak var zipCodeLabel: UILabel!
+    @IBOutlet weak var zipCodeLabel: UILabel! 
 
 }
