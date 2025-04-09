@@ -34,7 +34,7 @@ jobs:
           echo "Listing files in the current directory:"
           ls -l
           
-          # Explicitly check for .xcodeproj or .xcworkspace
+          # Explicitly check for CheckAddress.xcodeproj file
           if [ -f "CheckAddress.xcodeproj" ]; then
             filetype_parameter="project"
             file_to_build="CheckAddress.xcodeproj"
@@ -56,14 +56,14 @@ jobs:
             exit 1
           fi
           scheme=$(cat default)
-          
-          # Check for .xcworkspace or .xcodeproj
-          if [ -f *.xcworkspace ]; then
+
+          # Check for CheckAddress.xcodeproj file explicitly
+          if [ -f "CheckAddress.xcodeproj" ]; then
+            filetype_parameter="project"
+            file_to_build="CheckAddress.xcodeproj"
+          elif [ -f "*.xcworkspace" ]; then
             filetype_parameter="workspace"
             file_to_build=$(ls *.xcworkspace)
-          elif [ -f *.xcodeproj ]; then
-            filetype_parameter="project"
-            file_to_build=$(ls *.xcodeproj)
           else
             echo "No .xcodeproj or .xcworkspace found!"
             exit 1
@@ -74,6 +74,6 @@ jobs:
             echo "Multiple project/workspace files found. Please specify the correct one."
             exit 1
           fi
-          
+
           echo "Running tests for $file_to_build using scheme $scheme"
           xcodebuild test-without-building -scheme "$scheme" -"$filetype_parameter" "$file_to_build" -destination "platform=iOS Simulator,name=$device"
