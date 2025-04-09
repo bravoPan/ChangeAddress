@@ -3,7 +3,7 @@
 An iOS application based on the code from ahmed
 
 ### Address List View
-<img src="demo/1.png" width="300" alt="Address List">
+![Address List](demo/1.png)
 
 ### Add Address View
-<img src="demo/2.png" width="300" alt="Display Address">
+![Display Address](demo/2.png)
