@@ -15,6 +15,7 @@
 		15A47FF32651C8F3005963BE /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A47FF22651C8F3005963BE /* Address.swift */; };
 		15A47FF52651D519005963BE /* AddressViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A47FF42651D519005963BE /* AddressViewCell.swift */; };
 		15A47FF72651E68C005963BE /* AddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A47FF62651E68C005963BE /* AddressViewController.swift */; };
+		ED3DB1532DA5FA3B004882A4 /* AddAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3DB1522DA5FA3B004882A4 /* AddAddressViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		15A47FF22651C8F3005963BE /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
 		15A47FF42651D519005963BE /* AddressViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressViewCell.swift; sourceTree = "<group>"; };
 		15A47FF62651E68C005963BE /* AddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressViewController.swift; sourceTree = "<group>"; };
+		ED3DB1522DA5FA3B004882A4 /* AddAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAddressViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				15A47FF62651E68C005963BE /* AddressViewController.swift */,
+				ED3DB1522DA5FA3B004882A4 /* AddAddressViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 				15A47FF32651C8F3005963BE /* Address.swift in Sources */,
 				15A47FF72651E68C005963BE /* AddressViewController.swift in Sources */,
 				15A47FDB2651C659005963BE /* SceneDelegate.swift in Sources */,
+				ED3DB1532DA5FA3B004882A4 /* AddAddressViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

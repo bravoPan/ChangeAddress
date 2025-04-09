@@ -50,6 +50,17 @@ class AddressViewController: UITableViewController {
         return 150
     }
     
+    // MARK: - Navigation
     
-   
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "addAddress" {
+            if let addAddressVC = segue.destination as? AddAddressViewController {
+                addAddressVC.onSave = { [weak self] street, city, state, zipCode in
+                    let newAddress = Address(street: street, city: city, state: state, zipCode: zipCode)
+                    self?.addressArray.append(newAddress)
+                    self?.tableView.reloadData()
+                }
+            }
+        }
+    }
 }

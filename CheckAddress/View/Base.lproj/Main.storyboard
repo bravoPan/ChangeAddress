@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HYe-en-YWm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HYe-en-YWm">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -134,7 +134,7 @@
         <!--Add Address-->
         <scene sceneID="Aqi-BW-2uP">
             <objects>
-                <tableViewController id="xZQ-bY-TYv" sceneMemberID="viewController">
+                <tableViewController id="xZQ-bY-TYv" customClass="AddAddressViewController" customModule="CheckAddress" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="CqO-vP-Umf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -246,9 +246,23 @@
                             <outlet property="delegate" destination="xZQ-bY-TYv" id="3Uj-jN-Gco"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="cityTextField" destination="Fqm-WZ-wLo" id="city-outlet"/>
+                        <outlet property="stateTextField" destination="OW0-ZO-YfI" id="state-outlet"/>
+                        <outlet property="streetTextField" destination="XSY-K0-F93" id="street-outlet"/>
+                        <outlet property="zipCodeTextField" destination="u0H-1Q-Ehs" id="zipcode-outlet"/>
+                    </connections>
                     <navigationItem key="navigationItem" title="Add Address" id="vuj-SQ-Rzw">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="vBI-HK-0QH"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Ihs-ho-5dz"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="vBI-HK-0QH">
+                            <connections>
+                                <action selector="cancelButtonTapped:" destination="xZQ-bY-TYv" id="cancel-action"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Ihs-ho-5dz">
+                            <connections>
+                                <action selector="doneButtonTapped:" destination="xZQ-bY-TYv" id="done-action"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9ug-oJ-qhz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -261,7 +275,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HYe-en-YWm" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="djB-lP-ReZ">
-                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="96" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
