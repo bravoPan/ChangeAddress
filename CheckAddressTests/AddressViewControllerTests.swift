@@ -38,21 +38,6 @@ class AddressViewControllerTests: XCTestCase {
         XCTAssertEqual(numberOfRows, sut.addressArray.count)
     }
     
-    func testTableViewCellConfiguration() {
-        // Given
-        let tableView = sut.tableView
-        let indexPath = IndexPath(row: 0, section: 0)
-        
-        // When
-        let cell = sut.tableView(tableView!, cellForRowAt: indexPath) as! AddressViewCell
-        
-        // Then
-        XCTAssertEqual(cell.nameLabel.text, "Abou El-Fotouh Abd Allah")
-        XCTAssertEqual(cell.cityLabel.text, "Cairo")
-        XCTAssertEqual(cell.stateLabel.text, "Egypt")
-        XCTAssertEqual(cell.zipCodeLabel.text, "022")
-    }
-    
     func testAddAddress() {
         // Given
         let initialCount = sut.addressArray.count

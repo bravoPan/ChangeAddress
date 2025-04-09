@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,6 +18,16 @@
 		ED3DB1532DA5FA3B004882A4 /* AddAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3DB1522DA5FA3B004882A4 /* AddAddressViewController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		ED3DB15C2DA63914004882A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 15A47FCD2651C659005963BE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 15A47FD42651C659005963BE;
+			remoteInfo = CheckAddress;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		15A47FD52651C659005963BE /* CheckAddress.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CheckAddress.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15A47FD82651C659005963BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -30,10 +40,22 @@
 		15A47FF42651D519005963BE /* AddressViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressViewCell.swift; sourceTree = "<group>"; };
 		15A47FF62651E68C005963BE /* AddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressViewController.swift; sourceTree = "<group>"; };
 		ED3DB1522DA5FA3B004882A4 /* AddAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAddressViewController.swift; sourceTree = "<group>"; };
+		ED3DB1582DA63914004882A4 /* CheckAddressTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CheckAddressTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		ED3DB1592DA63914004882A4 /* CheckAddressTests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = CheckAddressTests; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		15A47FD22651C659005963BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED3DB1552DA63914004882A4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -47,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				15A47FD72651C659005963BE /* CheckAddress */,
+				ED3DB1592DA63914004882A4 /* CheckAddressTests */,
 				15A47FD62651C659005963BE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -55,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				15A47FD52651C659005963BE /* CheckAddress.app */,
+				ED3DB1582DA63914004882A4 /* CheckAddressTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -136,18 +160,45 @@
 			productReference = 15A47FD52651C659005963BE /* CheckAddress.app */;
 			productType = "com.apple.product-type.application";
 		};
+		ED3DB1572DA63914004882A4 /* CheckAddressTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED3DB1602DA63914004882A4 /* Build configuration list for PBXNativeTarget "CheckAddressTests" */;
+			buildPhases = (
+				ED3DB1542DA63914004882A4 /* Sources */,
+				ED3DB1552DA63914004882A4 /* Frameworks */,
+				ED3DB1562DA63914004882A4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ED3DB15D2DA63914004882A4 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				ED3DB1592DA63914004882A4 /* CheckAddressTests */,
+			);
+			name = CheckAddressTests;
+			packageProductDependencies = (
+			);
+			productName = CheckAddressTests;
+			productReference = ED3DB1582DA63914004882A4 /* CheckAddressTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		15A47FCD2651C659005963BE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1110;
+				LastSwiftUpdateCheck = 1630;
 				LastUpgradeCheck = 1110;
 				ORGANIZATIONNAME = MAC;
 				TargetAttributes = {
 					15A47FD42651C659005963BE = {
 						CreatedOnToolsVersion = 11.1;
+					};
+					ED3DB1572DA63914004882A4 = {
+						CreatedOnToolsVersion = 16.3;
+						TestTargetID = 15A47FD42651C659005963BE;
 					};
 				};
 			};
@@ -165,6 +216,7 @@
 			projectRoot = "";
 			targets = (
 				15A47FD42651C659005963BE /* CheckAddress */,
+				ED3DB1572DA63914004882A4 /* CheckAddressTests */,
 			);
 		};
 /* End PBXProject section */
@@ -177,6 +229,13 @@
 				15A47FE52651C65A005963BE /* LaunchScreen.storyboard in Resources */,
 				15A47FE22651C65A005963BE /* Assets.xcassets in Resources */,
 				15A47FE02651C659005963BE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED3DB1562DA63914004882A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,7 +255,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		ED3DB1542DA63914004882A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ED3DB15D2DA63914004882A4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 15A47FD42651C659005963BE /* CheckAddress */;
+			targetProxy = ED3DB15C2DA63914004882A4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		15A47FDE2651C659005963BE /* Main.storyboard */ = {
@@ -366,6 +440,55 @@
 			};
 			name = Release;
 		};
+		ED3DB15E2DA63914004882A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "gilbert-mac-air.CheckAddressTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CheckAddress.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CheckAddress";
+			};
+			name = Debug;
+		};
+		ED3DB15F2DA63914004882A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "gilbert-mac-air.CheckAddressTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CheckAddress.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CheckAddress";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -383,6 +506,15 @@
 			buildConfigurations = (
 				15A47FEA2651C65A005963BE /* Debug */,
 				15A47FEB2651C65A005963BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED3DB1602DA63914004882A4 /* Build configuration list for PBXNativeTarget "CheckAddressTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED3DB15E2DA63914004882A4 /* Debug */,
+				ED3DB15F2DA63914004882A4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

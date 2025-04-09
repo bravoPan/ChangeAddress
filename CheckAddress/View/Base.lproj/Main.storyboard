@@ -246,12 +246,6 @@
                             <outlet property="delegate" destination="xZQ-bY-TYv" id="3Uj-jN-Gco"/>
                         </connections>
                     </tableView>
-                    <connections>
-                        <outlet property="cityTextField" destination="Fqm-WZ-wLo" id="city-outlet"/>
-                        <outlet property="stateTextField" destination="OW0-ZO-YfI" id="state-outlet"/>
-                        <outlet property="streetTextField" destination="XSY-K0-F93" id="street-outlet"/>
-                        <outlet property="zipCodeTextField" destination="u0H-1Q-Ehs" id="zipcode-outlet"/>
-                    </connections>
                     <navigationItem key="navigationItem" title="Add Address" id="vuj-SQ-Rzw">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="vBI-HK-0QH">
                             <connections>
@@ -264,6 +258,12 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="cityTextField" destination="Fqm-WZ-wLo" id="city-outlet"/>
+                        <outlet property="stateTextField" destination="OW0-ZO-YfI" id="state-outlet"/>
+                        <outlet property="streetTextField" destination="XSY-K0-F93" id="street-outlet"/>
+                        <outlet property="zipCodeTextField" destination="u0H-1Q-Ehs" id="zipcode-outlet"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9ug-oJ-qhz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
