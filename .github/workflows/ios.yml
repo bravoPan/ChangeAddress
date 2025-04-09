@@ -30,6 +30,10 @@ jobs:
           fi
           scheme=$(cat default)
           
+          # Print the current directory and files to debug
+          echo "Listing files in the current directory:"
+          ls -l
+          
           # Check for .xcworkspace or .xcodeproj
           if [ -f *.xcworkspace ]; then
             filetype_parameter="workspace"
