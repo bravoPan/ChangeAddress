@@ -29,17 +29,26 @@ jobs:
             exit 1
           fi
           scheme=$(cat default)
+          
+          # Check for .xcworkspace or .xcodeproj
           if [ -f *.xcworkspace ]; then
             filetype_parameter="workspace"
             file_to_build=$(ls *.xcworkspace)
-          else
+          elif [ -f *.xcodeproj ]; then
             filetype_parameter="project"
             file_to_build=$(ls *.xcodeproj)
-          fi
-          if [ -z "$file_to_build" ]; then
+          else
             echo "No .xcodeproj or .xcworkspace found!"
             exit 1
           fi
+
+          # Ensure only one file is returned by ls
+          if [ $(echo "$file_to_build" | wc -l) -gt 1 ]; then
+            echo "Multiple project/workspace files found. Please specify the correct one."
+            exit 1
+          fi
+          
+          echo "Building $file_to_build using scheme $scheme"
           xcodebuild build-for-testing -scheme "$scheme" -"$filetype_parameter" "$file_to_build" -destination "platform=iOS Simulator,name=$device"
       - name: Test
         run: |
@@ -49,15 +58,24 @@ jobs:
             exit 1
           fi
           scheme=$(cat default)
+          
+          # Check for .xcworkspace or .xcodeproj
           if [ -f *.xcworkspace ]; then
             filetype_parameter="workspace"
             file_to_build=$(ls *.xcworkspace)
-          else
+          elif [ -f *.xcodeproj ]; then
             filetype_parameter="project"
             file_to_build=$(ls *.xcodeproj)
-          fi
-          if [ -z "$file_to_build" ]; then
+          else
             echo "No .xcodeproj or .xcworkspace found!"
             exit 1
           fi
+
+          # Ensure only one file is returned by ls
+          if [ $(echo "$file_to_build" | wc -l) -gt 1 ]; then
+            echo "Multiple project/workspace files found. Please specify the correct one."
+            exit 1
+          fi
+          
+          echo "Running tests for $file_to_build using scheme $scheme"
           xcodebuild test-without-building -scheme "$scheme" -"$filetype_parameter" "$file_to_build" -destination "platform=iOS Simulator,name=$device"
