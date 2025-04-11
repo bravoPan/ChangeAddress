@@ -38,7 +38,7 @@ jobs:
           if [ -f "CheckAddress.xcodeproj" ]; then
             filetype_parameter="project"
             file_to_build="CheckAddress.xcodeproj"
-          elif [ -f "*.xcworkspace" ]; then
+          elif ls *.xcworkspace 1> /dev/null 2>&1; then
             filetype_parameter="workspace"
             file_to_build=$(ls *.xcworkspace)
           else
@@ -61,7 +61,7 @@ jobs:
           if [ -f "CheckAddress.xcodeproj" ]; then
             filetype_parameter="project"
             file_to_build="CheckAddress.xcodeproj"
-          elif [ -f "*.xcworkspace" ]; then
+          elif ls *.xcworkspace 1> /dev/null 2>&1; then
             filetype_parameter="workspace"
             file_to_build=$(ls *.xcworkspace)
           else
