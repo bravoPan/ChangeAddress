@@ -58,7 +58,7 @@ jobs:
           scheme=$(cat default)
 
           # Check for CheckAddress.xcodeproj file explicitly
-          if [ -f "CheckAddress.xcodeproj" ]; then
+          if [ -d "CheckAddress.xcodeproj" ]; then
             filetype_parameter="project"
             file_to_build="CheckAddress.xcodeproj"
           elif ls *.xcworkspace 1> /dev/null 2>&1; then
