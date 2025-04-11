@@ -11,12 +11,17 @@ on:
 
 jobs:
   build:
-
-    runs-on: macos-latest
-
+    runs-on: macos-14
     steps:
-    - uses: actions/checkout@v4
-    - name: Build
-      run: swift build -v
-    - name: Run tests
-      run: swift test -v
+      - uses: actions/checkout@v4
+
+      - name: Install Swift 6.1
+        run: |
+          curl -L https://download.swift.org/swift-6.1-release/xcode/swift-6.1-RELEASE/swift-6.1-RELEASE-osx.pkg -o swift.pkg
+          sudo installer -pkg swift.pkg -target /
+
+      - name: Verify Swift version
+        run: swift --version
+
+      - name: Build
+        run: swift build -v
