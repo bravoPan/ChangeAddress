@@ -24,5 +24,5 @@ jobs:
         run: swift --version
 
       - name: Build
-        export TOOLCHAINS=swift
+        run: export TOOLCHAINS=swift
         run: swift build -v
