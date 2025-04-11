@@ -16,7 +16,7 @@ jobs:
         uses: actions/checkout@v4
       - name: Debug xcodebuild output
         run: |
-          scheme_list=$(xcodebuild -list -json)
+          scheme_list=$(xcodebuild -list -json -verbose)
           echo "xcodebuild output: $scheme_list"
       - name: Set Default Scheme
         run: |
